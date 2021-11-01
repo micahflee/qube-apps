@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Flatpak Apps
+Name=Qube Apps
 Comment=Install, run, and update apps in the private storage of a Qube
 Exec=qube-apps
 Terminal=false
