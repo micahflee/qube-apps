@@ -1,8 +1,8 @@
 # Qube Apps
 
-Install, run, and update apps in the private storage of a Qube
+Install, run, and update apps in the private storage of a Qube.
 
-## Building instrutions
+## Build and install in Qubes
 
 Get the code:
 
@@ -11,22 +11,18 @@ git clone https://github.com/micahflee/flatpak-apps.git
 cd flatpak-apps
 ```
 
-Install dependencies in Fedora:
+Install dependencies:
 
-```sh
-sudo dnf install -y python3-pyside2
-```
+Fedora: `sudo dnf install -y python3-pyside2`
+Debian: `sudo apt-get install -y python3-setuptools python3-stdeb dh-python flatpak python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtwidgets`
 
-Make an RPM:
+Make a package:
 
-```sh
-./build_rpm.sh
-```
+Fedora: `./build_rpm.sh`
+Debian: `./build_deb.sh`
 
-Copy the RPM to your template:
+To install, copy the package you built to your template and install it.
 
-```sh
-qvm-copy dist/qube-apps-*.noarch.rpm
-```
+Now, in your Qube Settings for each qube, you can add "Qube Apps" as an application.
 
-Copy it to your latest Fedora template, and then open a terminal in that template and install it with `sudo dnf install ./QubesIncoming/myqube/qube-apps-*.noarch.rpm`, replacing `myqube` with the name of the Qube you build the RPM in.
+In practice, you will likely need to give each qube that you install much software in more private storage than the default 2GB.
