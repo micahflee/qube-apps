@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "flatpak-apps"
+version = "0.1.0"
+description = "Simple GUI for managing user installed Flatpak apps from Flathub"
+authors = ["Micah Lee <micah@micahflee.com>"]
+license = "GPLv3"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.10"
+PySide2 = "^5.15.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
