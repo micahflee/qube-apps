@@ -25,4 +25,4 @@ To install, copy the package you built to your template and install it.
 
 Now, in your Qube Settings for each qube, you can add "Qube Apps" as an application.
 
-In practice, you will likely need to give each qube that you install much software in more private storage than the default 2GB.
+In practice, you will likely need to give each qube that you install apps in more private storage than the default 2GB.
