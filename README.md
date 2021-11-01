@@ -13,13 +13,13 @@ cd flatpak-apps
 
 Install dependencies:
 
-Fedora: `sudo dnf install -y python3-pyside2`
-Debian: `sudo apt-get install -y python3-setuptools python3-stdeb dh-python flatpak python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtwidgets`
+- Fedora: `sudo dnf install -y python3-pyside2`
+- Debian: `sudo apt-get install -y python3-setuptools python3-stdeb dh-python flatpak python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtwidgets`
 
 Make a package:
 
-Fedora: `./build_rpm.sh`
-Debian: `./build_deb.sh`
+- Fedora: `./build_rpm.sh`
+- Debian: `./build_deb.sh`
 
 To install, copy the package you built to your template and install it.
 
