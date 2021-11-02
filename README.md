@@ -7,8 +7,8 @@ Install, run, and update apps in the private storage of a Qube.
 Get the code:
 
 ```sh
-git clone https://github.com/micahflee/flatpak-apps.git
-cd flatpak-apps
+git clone https://github.com/micahflee/qube-apps.git
+cd qube-apps
 ```
 
 Install dependencies:
