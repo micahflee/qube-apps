@@ -14,5 +14,5 @@ if [[ $? -eq 0 ]]; then
     echo "sudo apt install $FILENAME"
 else
     echo ""
-    echo "Porcupine failed to build!"
+    echo "Qube Apps failed to build!"
 fi
