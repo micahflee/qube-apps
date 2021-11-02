@@ -2,6 +2,8 @@
 
 Install, run, and update apps in the private storage of a Qube.
 
+See the blog post: [Qube Apps: a Flatpak-based app store for each qube](https://micahflee.com/2021/11/introducing-qube-apps/)
+
 ## Build and install in Qubes
 
 Get the code:
