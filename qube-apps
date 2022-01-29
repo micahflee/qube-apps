@@ -26,7 +26,7 @@ class SearchDialog(QtWidgets.QDialog):
         self.setModal(True)
         self.setWindowTitle("Search Flathub for apps")
 
-        self.setMinimumWidth(500)
+        self.setMinimumWidth(600)
         self.setMinimumHeight(300)
 
         self.input = QtWidgets.QLineEdit()
@@ -80,10 +80,13 @@ class SearchDialog(QtWidgets.QDialog):
 
         # Add the results
         results = json.loads(results_json)
-        for result in results:
-            print(f"Result: {result}")
-            app = SearchApp(result["app_id"], result["name"])
-            self.results_layout.addWidget(app)
+        if len(results) == 0:
+            self.results_layout.addWidget(QtWidgets.QLabel("App not found"))
+        else:
+            for result in results:
+                print(f"Result: {result}")
+                app = SearchApp(result["app_id"], result["name"])
+                self.results_layout.addWidget(app)
 
 
 class SearchApp(QtWidgets.QWidget):
@@ -149,6 +152,11 @@ class SearchThread(QtCore.QThread):
                 self.query,
             ]
         ).decode()
+
+        if "No matches found" in out:
+            self.success.emit(json.dumps(results))
+            return
+
         for line in out.split("\n"):
             line = line.strip()
             if valid_package(line):
