@@ -15,7 +15,7 @@ cd qube-apps
 
 Install dependencies:
 
-- Fedora: `sudo dnf install -y python3-pyside2`
+- Fedora: `sudo dnf install -y python3-pyside2 rpm-build`
 - Debian: `sudo apt-get install -y python3-setuptools python3-stdeb dh-python flatpak python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtwidgets`
 
 Make a package:
